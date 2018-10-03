@@ -39,20 +39,29 @@ public class Example2 {
         this.H3.set(h3);
     }
 
-    public Example2 (double W4, double W5, double W6, double W1, double W2, double W3, double H1, double H2, double H3, double H4)
+    public Example2 (double W4, double W5, double W1, double W2, double W3, double H1, double H2,  double H4)
       {
           this.W4 = new SimpleDoubleProperty (W4);
           this.W5 = new SimpleDoubleProperty (W5);
-          this.W6 = new SimpleDoubleProperty (W6);
+
           this.W1 = new SimpleDoubleProperty (W1);
           this.W2 = new SimpleDoubleProperty (W2);
           this.W3 = new SimpleDoubleProperty (W3);
           this.H1 = new SimpleDoubleProperty (H1);
           this.H2 = new SimpleDoubleProperty (H2);
-          this.H3 = new SimpleDoubleProperty (H3);
+          this.H3 = new SimpleDoubleProperty (0);
           this.H4 = new SimpleDoubleProperty (H4);
 
+          this.W6 = new SimpleDoubleProperty(0);
 
+
+
+        bind();
+      }
+
+      public void bind(){
+        W6.bind(W1.add(W2).add(W3).add(W4).add(W5));
+        H3.bind(H4.subtract(H1).subtract(H2));
       }
 
     public double getW4() {
