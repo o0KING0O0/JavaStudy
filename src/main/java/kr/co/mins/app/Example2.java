@@ -3,62 +3,92 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 
 public class Example2 {
-    private DoubleProperty T1;
-    private DoubleProperty T2;
-    private DoubleProperty T3;
+    private DoubleProperty W4;
+    private DoubleProperty W5;
+    private DoubleProperty W6;
     private DoubleProperty W1;
     private DoubleProperty W2;
     private DoubleProperty W3;
     private DoubleProperty H1;
     private DoubleProperty H2;
+    private DoubleProperty H3;
+    private DoubleProperty H4;
 
-      public Example2 (double T1, double T2, double T3, double W1, double W2, double W3, double H1, double H2)
+
+    public double getH3() {
+        return H3.get();
+    }
+
+    public double getH4() {
+        return H4.get();
+    }
+
+    public DoubleProperty h4Property() {
+        return H4;
+    }
+
+    public void setH4(double h4) {
+        this.H4.set(h4);
+    }
+
+    public DoubleProperty h3Property() {
+        return H3;
+    }
+
+    public void setH3(double h3) {
+        this.H3.set(h3);
+    }
+
+    public Example2 (double W4, double W5, double W6, double W1, double W2, double W3, double H1, double H2, double H3, double H4)
       {
-          this.T1 = new SimpleDoubleProperty (T1);
-          this.T2 = new SimpleDoubleProperty (T2);
-          this.T3 = new SimpleDoubleProperty (T3);
+          this.W4 = new SimpleDoubleProperty (W4);
+          this.W5 = new SimpleDoubleProperty (W5);
+          this.W6 = new SimpleDoubleProperty (W6);
           this.W1 = new SimpleDoubleProperty (W1);
           this.W2 = new SimpleDoubleProperty (W2);
           this.W3 = new SimpleDoubleProperty (W3);
           this.H1 = new SimpleDoubleProperty (H1);
           this.H2 = new SimpleDoubleProperty (H2);
+          this.H3 = new SimpleDoubleProperty (H3);
+          this.H4 = new SimpleDoubleProperty (H4);
+
 
       }
 
-    public double getT1() {
-        return T1.get();
+    public double getW4() {
+        return W4.get();
     }
 
-    public DoubleProperty t1Property() {
-        return T1;
+    public DoubleProperty w4Property() {
+        return W4;
     }
 
-    public void setT1(double t1) {
-        this.T1.set(t1);
+    public void setW4(double w4) {
+        this.W4.set(w4);
     }
 
-    public double getT2() {
-        return T2.get();
+    public double getW5() {
+        return W5.get();
     }
 
-    public DoubleProperty t2Property() {
-        return T2;
+    public DoubleProperty w5Property() {
+        return W5;
     }
 
-    public void setT2(double t2) {
-        this.T2.set(t2);
+    public void setW5(double w5) {
+        this.W5.set(w5);
     }
 
-    public double getT3() {
-        return T3.get();
+    public double getW6() {
+        return W6.get();
     }
 
-    public DoubleProperty t3Property() {
-        return T3;
+    public DoubleProperty w6Property() {
+        return W6;
     }
 
-    public void setT3(double t3) {
-        this.T3.set(t3);
+    public void setW6(double w6) {
+        this.W6.set(w6);
     }
 
     public double getW1() {
